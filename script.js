@@ -20,7 +20,20 @@ let formData = {
   message: "",
 };
 
-const feedback_form_state = "";
+const LOCAL_KEY = "feedback_form_state";
+
+function initForm() {
+  let persistedFilter = localStorage.getItem(LOCAL_KEY);
+  if (persistedFilter) {
+    persistedFilter = JSON.parse(persistedFilter);
+    formEl.elements.email.value = persistedFilter.email || "";
+    formEl.elements.message.value = persistedFilter.message || "";
+    formData = persistedFilter;
+  }
+}
+
+initForm();
+
 formEl.addEventListener("input", handlerGetComment);
 
 function handlerGetComment(e) {
@@ -30,10 +43,5 @@ function handlerGetComment(e) {
     email: formEl.elements.email.value,
     message: formEl.elements.message.value,
   };
-  localStorage.setItem("feedback_form_state", JSON.stringify(formData));
-
-  if (feedback_form_state === "") {
-    return;
-  } else {
-  }
+  localStorage.setItem("LOCAL_KEY", JSON.stringify(formData));
 }
