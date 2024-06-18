@@ -1,0 +1,62 @@
+/* Загальні стилі для форми */
+.feedback-form {
+  max-width: 500px; /* Максимальна ширина форми */
+  margin: 0 auto; /* Центрування форми по горизонталі */
+  padding: 20px; /* Внутрішні відступи */
+  border: 1px solid #ccc; /* Бордюр навколо форми */
+  border-radius: 8px; /* Закруглення кутів форми */
+  background-color: #f9f9f9; /* Колір фону форми */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тінь для форми */
+}
+
+/* Стилі для підписів до полів */
+.feedback-form label {
+  display: block; /* Відображення підпису як блокового елементу */
+  margin-bottom: 10px; /* Відступ знизу підпису */
+  font-weight: bold; /* Жирний шрифт для підпису */
+  color: #333; /* Колір тексту підпису */
+}
+
+/* Стилі для полів вводу */
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  width: 100%; /* Ширина поля вводу заповнює всю ширину форми */
+  padding: 10px; /* Внутрішні відступи */
+  margin-bottom: 15px; /* Відступ знизу під полем вводу */
+  border: 1px solid #ccc; /* Бордюр навколо полів вводу */
+  border-radius: 4px; /* Закруглення кутів полів вводу */
+  font-size: 16px; /* Розмір шрифту в полях вводу */
+  box-sizing: border-box; /* Врахування бордюру і внутрішніх відступів у ширині */
+}
+
+/* Стилі для полів вводу при фокусі */
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:focus {
+  border-color: #007bff; /* Колір бордюру при фокусі */
+  outline: none; /* Відключення стандартного обрамлення при фокусі */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тінь для полів вводу при фокусі */
+}
+
+/* Стилі для кнопки відправки */
+.feedback-form button[type="submit"] {
+  display: inline-block; /* Відображення кнопки як інлайн-блок */
+  padding: 10px 20px; /* Внутрішні відступи */
+  background-color: #007bff; /* Колір фону кнопки */
+  color: #fff; /* Колір тексту на кнопці */
+  border: none; /* Відсутність бордюру */
+  border-radius: 4px; /* Закруглення кутів кнопки */
+  font-size: 16px; /* Розмір шрифту на кнопці */
+  cursor: pointer; /* Курсор у вигляді руки при наведенні */
+  transition: background-color 0.3s ease; /* Анімація зміни фону кнопки */
+}
+
+/* Стилі для кнопки при наведенні */
+.feedback-form button[type="submit"]:hover {
+  background-color: #0056b3; /* Темніший колір фону при наведенні */
+}
+
+/* Стилі для кнопки при фокусі */
+.feedback-form button[type="submit"]:focus {
+  outline: none; /* Відключення стандартного обрамлення при фокусі */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тінь для кнопки при фокусі */
+}
