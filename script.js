@@ -39,9 +39,6 @@ formEl.addEventListener("input", handlerGetComment);
 function handlerGetComment(e) {
   e.preventDefault();
 
-  formData = {
-    email: formEl.elements.email.value,
-    message: formEl.elements.message.value,
-  };
+  formData[e.target.name] = e.target.value;
   localStorage.setItem("LOCAL_KEY", JSON.stringify(formData));
 }
